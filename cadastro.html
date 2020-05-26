@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="titulo"><object type="image/svg+xml" data="./img/icons/sing.svg"></object>Rap</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Login</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+       
+            <form action="">
+                <div class="nomes">
+                    <label class="nome" for="">
+                        Nome<!--<span class="spn-form">*</span> -->
+                    </label>
+                    <label class="nome" for="">
+                        Sobrenome <!--<span class="spn-form">*</span> -->
+                    </label>
+                    <input placeholder="Romullo"  type="text" required>
+                    <input placeholder="Pereira"  type="text" required>
+                </div>
+
+                <div class="email">
+                    <label for="">
+                        Email<!--<span class="spn-form">*</span> -->
+                    </label>
+                    <input placeholder="romulo.pereira@gmail.com" type="email" name="" id="" required>
+                </div>
+
+                <div class="senhas">
+                    <label class="nome" for="">
+                         Senha <!--<span class="spn-form">*</span> -->
+                    </label>
+                    <label class="nome" for="">
+                        Confirmar Senha <!--<span class="spn-form">*</span> -->
+                    </label>
+                    <input placeholder="Sua senha" type="password" name="" id="pass" required>
+                    <input placeholder="Confirme sua senha" type="password" name="" id="confirma" required>
+                </div>
+
+                <div class="button">
+                    <button type="button" onclick="enviar()">Cadastre-se</button>
+                </div>
+                
+            </form>
+        
+    </div>
+</body>
+<script>
+    function enviar() {
+        if(pass.value != confirma.value){
+            alert('Senhas não coincidem');
+        }else{
+            alert('Cadastrado com sucesso');
+            location.reload();
+        }
+    }
+</script>
+</html>

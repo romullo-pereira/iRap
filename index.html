@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/02e8f10121.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <script src="./js/script.js"></script>
+    <title>iRap</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="titulo"><img src="./img/logoo.png" alt=""></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Sign In <i class='fas fa-sign-in-alt'></i></a></li>
+                    <li><a href="#">Sign Up <i class='fas fa-angle-right'></i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="banner">
+            <div class="opa">
+                <!-- <div class="container"> -->
+                    <div>
+                        <h1>O que é o iRap ?</h1>
+                        <p>Um portal de rap com algumas postagens sobre esse maravilhoso e desvalorizado estilo musical. Aqui temos Artigos com noticias, catalogo de álbuns e discografia.</p>
+                        <a href="#break"><button class="btn">VEJA <i class="fas fa-arrow-down icon"></i></button></a>
+                    </div>
+                    <div>
+                        <!-- <img src="./img/drawTupac.png"> -->
+                         <img src="./img/rap.png">
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div id="break"></div>
+        <div  class="content">
+            <div class="container">
+                <h1 id="title">Postagens</h1>
+                <div class="card">
+                    <img src="./img/bg.jpg" alt="">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <img src="./img/bg.jpg" alt="">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <img src="./img/bg.jpg" alt="">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <img src="./img/bg.jpg" alt="">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <img src="./img/bg.jpg" alt="">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('a').click(function(e) {
+        e.preventDefault();
+
+        var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top,
+                menuHeight = $('nav').innerHeight();
+        // console.log(e);
+        $('html, body').animate({
+            scrollTop : targetOffset - 100
+        }, 1000);
+    });
+</script>
+</html>

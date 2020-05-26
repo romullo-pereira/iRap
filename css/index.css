@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.container {
+    align-items: center;
+    max-width: 980px;
+    margin: 0 auto;
+    height: 100%;
+}
+.header .container {
+    min-height: 150px;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    position: fixed;
+    background-color: rgba(216, 37, 37, 0);
+}
+
+    .header-aux1{
+        background-color: rgba(167, 23, 23, 0);
+    }
+
+    .header-aux2 {
+        width: 100%;
+        height: 100px;
+        z-index: 3;
+        position: fixed;
+        background-color: rgb(0, 0, 0);
+    }
+
+
+.nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+    /* z-index: 3; */
+    
+}
+
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+.nav a:hover {
+    color: #e4210a;
+}
+
+
+
+.nav ul {
+    margin: 0 auto;
+    padding: 35px;
+    
+}
+
+.nav{
+    float: right;
+}
+
+.header object {
+    height: 30px;
+}
+
+.titulo {
+    float: left;
+    color: white;
+    margin: auto;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.titulo img {
+    height: 50px;
+}
+
+@font-face {
+    font-family: 'Graffiti';
+    src: url(./Graffiti.ttf);
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/banner5.jpg');
+    background-size: cover;
+    margin: 0;
+    color: white;
+}
+.opa{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(31, 26, 26, 0.774); */
+    background-color: rgba(0, 0, 0, 0.774);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.opa div{
+    padding-top: 0;
+    width: 50%;
+    margin-left: 15%;
+}
+.opa h1 {
+    text-align: left;
+}
+.opa p {
+    margin-top: 5px;
+    font-size: 20px;
+    width: 90%;
+    text-align: left;
+    font-weight: 300;
+}
+
+.opa img {
+    width: 70%;
+    margin-right: 15%;
+}
+
+.btn {
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    float: left;
+    /* margin-left: 20%; */
+    background-color: #11111100;
+    border: 3px #fff solid;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a .btn{
+    text-decoration: none;
+}
+
+.btn:hover {
+    border: 3px #e4210a solid;
+    color: #e4210a;
+    transition: 0.5s ease-in;
+}
+
+.icon {
+    font-size: 15px;
+}
+
+
+.card {
+    width: 30%;
+    margin-right: 3%;
+    margin-bottom: 10%;
+    background-color: #fff;
+    height: auto;
+    float: left;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+}
+
+.card a {
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.card a:hover {
+    color: #e4210a;
+}
