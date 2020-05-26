@@ -11,64 +11,81 @@
     <div class="header">
         <div class="container">
             <div>
-                <h1 class="titulo"><object type="image/svg+xml" data="./img/icons/sing.svg"></object>Rap</h1>
+                <h1 class="titulo"><img src="./img/logoo.png" alt=""></h1>
             </div>
             <div class="nav">
-                <ul>
-                    <li><a href="index.html">Login</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                </ul>
+                
             </div>
         </div>
     </div>
 
-    <div class="form">
-       
-            <form action="">
-                <div class="nomes">
-                    <label class="nome" for="">
-                        Nome<!--<span class="spn-form">*</span> -->
-                    </label>
-                    <label class="nome" for="">
-                        Sobrenome <!--<span class="spn-form">*</span> -->
-                    </label>
-                    <input placeholder="Romullo"  type="text" required>
-                    <input placeholder="Pereira"  type="text" required>
-                </div>
+    <div class="forms">
+        <div class="form">
+            <form action="" style="display: none;" id="form1">
+                <h1>Cadastre-se</h1>
+                <label for="">Nome</label>
+                <input placeholder="Romullo"  type="text" required>
 
-                <div class="email">
-                    <label for="">
-                        Email<!--<span class="spn-form">*</span> -->
-                    </label>
-                    <input placeholder="romulo.pereira@gmail.com" type="email" name="" id="" required>
-                </div>
+                <label for="">Email</label>
+                <input placeholder="romulo.pereira@gmail.com" type="email" name="" id="" required>
+            
+                <label for="">Senha</label>
+                <input placeholder="Sua senha" type="password" name="" id="pass" required>
 
-                <div class="senhas">
-                    <label class="nome" for="">
-                         Senha <!--<span class="spn-form">*</span> -->
-                    </label>
-                    <label class="nome" for="">
-                        Confirmar Senha <!--<span class="spn-form">*</span> -->
-                    </label>
-                    <input placeholder="Sua senha" type="password" name="" id="pass" required>
-                    <input placeholder="Confirme sua senha" type="password" name="" id="confirma" required>
-                </div>
-
-                <div class="button">
-                    <button type="button" onclick="enviar()">Cadastre-se</button>
+                <label for="">Confirmar Senha</label>
+                <input placeholder="Confirme sua senha" type="password" name="" id="confirma" required>
+            
+                <div class="buttons">
+                    <button type="button" class="btn-1" onclick="trocar()">Cadastre-se</button>
+                    <button type="button" class="btn-2" onclick="trocar()">Entrar</button>
                 </div>
                 
             </form>
+
+            <form action="" id="form2">
+                <h1 class="form-2" >Entrar</h1>
+                <label class="form-2" for="">Email</label>
+                <input class="form-2" placeholder="romulo.pereira@gmail.com" type="email" name="" id="" required>
+            
+                <label class="form-2" for="">Senha</label>
+                <input class="form-2" placeholder="Sua senha" type="password" name="" id="pass" required>
+
+                <div class="buttons">
+                    <button type="button" class="btn-2" onclick="trocar()">Cadastre-se</button>
+                    <button type="button" class="btn-1" onclick="trocar()">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+            
+
+            <div class="right">
+                <img src="./img/rap.png" alt="">
+            </div>
         
     </div>
 </body>
 <script>
-    function enviar() {
-        if(pass.value != confirma.value){
-            alert('Senhas não coincidem');
+    // function enviar() {
+    //     if(pass.value != confirma.value){
+    //         alert('Senhas não coincidem');
+    //     }else{
+    //         alert('Cadastrado com sucesso');
+    //         location.reload();
+    //     }
+    // }
+
+    var c = true;
+    function trocar() {
+
+        if(c) {
+            document.getElementById('form1').style.display = 'block';
+            document.getElementById('form2').style.display = 'none';
+            c = false;
         }else{
-            alert('Cadastrado com sucesso');
-            location.reload();
+            document.getElementById('form1').style.display = 'none';
+            document.getElementById('form2').style.display = 'block';
+            c = true;
         }
     }
 </script>
