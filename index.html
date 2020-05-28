@@ -22,7 +22,7 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="#">Entrar <i class='fas fa-sign-in-alt'></i></a></li>
+                    <li><a href="cadastro.html">Entrar <i class='fas fa-sign-in-alt'></i></a></li>
                 </ul>
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="banner">
             <div class="opa">
                 <!-- <div class="container"> -->
-                    <div>
+                    <div class="teste">
                         <h1>O que é o iRap ?</h1>
                         <p>Um portal de rap com algumas postagens sobre esse maravilhoso e desvalorizado estilo musical. Aqui temos Artigos com noticias, catalogo de álbuns e discografia.</p>
                         <a href="#break"><button class="btn">VEJA <i class="fas fa-arrow-down icon"></i></button></a>
@@ -86,9 +86,8 @@
     </div>
 </body>
 <script>
-    $('a').click(function(e) {
+    $('.teste a').click(function(e) {
         e.preventDefault();
-
         var id = $(this).attr('href'),
                 targetOffset = $(id).offset().top,
                 menuHeight = $('nav').innerHeight();
