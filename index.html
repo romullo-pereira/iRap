@@ -47,39 +47,41 @@
         <div  class="content">
             <div class="container">
                 <h1 id="title">Postagens</h1>
-                <div class="card">
-                    <img src="./img/bg.jpg" alt="">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
-                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
-                </div>
+                <div data-animation="top">
+                    <div class="card">
+                        <img src="./img/bg.jpg" alt="">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                        <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
 
-                <div class="card">
-                    <img src="./img/bg.jpg" alt="">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
-                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
-                </div>
+                    <div class="card">
+                        <img src="./img/bg.jpg" alt="">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                        <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
 
-                <div class="card">
-                    <img src="./img/bg.jpg" alt="">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
-                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
-                </div>
+                    <div class="card">
+                        <img src="./img/bg.jpg" alt="">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                        <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
 
-                <div class="card">
-                    <img src="./img/bg.jpg" alt="">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
-                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
-                </div>
+                    <div class="card">
+                        <img src="./img/bg.jpg" alt="">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                        <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
 
-                <div class="card">
-                    <img src="./img/bg.jpg" alt="">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
-                    <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    <div class="card">
+                        <img src="./img/bg.jpg" alt="">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                        <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,5 +98,31 @@
             scrollTop : targetOffset - 100
         }, 1000);
     });
+
+    const target = document.querySelectorAll('[data-animation]');
+    const animationClass = 'animate';
+
+    function animationScroll() {
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 5);
+        target.forEach(function (element) {
+            if(windowTop > element.offsetTop) {
+                element.classList.add(animationClass);
+                console.log('entrou');
+                
+            }else {
+                element.classList.remove(animationClass);
+            }
+        })
+    }
+
+    animationScroll();
+
+    if(target.length) {
+        window.addEventListener('scroll' , function() {
+            animationScroll();
+        });
+    }
+
+
 </script>
 </html>
