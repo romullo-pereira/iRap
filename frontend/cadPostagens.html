@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadPostagem.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://kit.fontawesome.com/02e8f10121.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>iRap</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div>
+                <h1 class="titulo"><a href="home.html"><img src="./img/logoo.png" alt=""></a></h1>
+            </div>
+            <div class="nav">
+            <ul>
+                <li><a id="nomeUser">Usuario</a></li>
+                <li><a onclick="logout()">Sair <i class='fas fa-sign-out-alt icon'></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form id="cadPostForm">
+            <h1 class="" >Cadastrar Postagem</h1>
+            <label class="" for="">Imagem</label>
+            <input class="inputsForm" id="inputImg" type="file">
+
+            <label >Titulo</label>
+            <input class="inputsForm" id="inputTitle"  required>
+
+            <label class="" for="">Descrição</label>
+            <input class="inputsForm" id="inputDesc"  required>
+
+            <label class="" for="">Conteudo</label>
+            <textarea class="inputsForm" id="inputContent"  required></textarea>
+
+            <button type="submit" class="btn-2">Cadastrar</button>
+
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <img src="./img/logoo.png" alt="">
+            <div class="copyright">
+                <span>Desenvolvido por</span>
+                <p>Romullo Pereira</p>
+            </div>
+            <div class="contato">
+                <a href="https://github.com/romullo-pereira"><img src="./img/icons/github-white.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/romullo-pereira-84580b16b/"><img src="./img/icons/linkedin2.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/services/api.js"></script>
+<script src="./js/logado.js"></script>
+</html>

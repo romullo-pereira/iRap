@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/02e8f10121.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="titulo"><img src="./img/logoo.png" alt=""></h1>
+            </div>
+            <div class="nav">
+                
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form">
+            <form action="" style="display: none;" id="form1" data-animation="top">
+                <h1>Cadastre-se</h1>
+                <label for="">Nome <i class="fas fa-check" id="nomeValido" style="color: #48e933; display: none;"></i>
+                    
+                    <i class="fas fa-times" id="nomeInvalido" style="color: rgba(226, 14, 14, 0.979); display: none;"></i>
+                </label>
+                <input placeholder="Romullo" id="inputNome" onkeyup="validarNome()" type="text" required>
+
+                <label for="">
+                    Email 
+                    <i class="fas fa-check" id="emailValido" style="color: #48e933; display: none;"></i>
+                    <i class="fas fa-times" id="emailInvalido" style="color: rgba(226, 14, 14, 0.979); display: none;"></i>
+                </label>
+                <input placeholder="romulo.pereira@gmail.com" type="email" onkeyup="validarEmail()" id="inputEmail" required>
+            
+                <label for="">
+                    Senha
+                    <i class="fas fa-check" id="senhaValida"  style="color: #48e933; display: none;"></i>
+                    <i class="fas fa-times" id="senhainvalido"style="color: rgba(226, 14, 14, 0.979); display: none;"></i>
+                </label>
+                <input placeholder="Sua senha" onkeyup="validarSenha() " type="password" id="inputSenha" onkeyup="" required>
+
+                <label for="">
+                    Confirmar Senha
+                    <i class="fas fa-check" id="confirmaValida" style="color: #48e933; display: none;"></i>
+                    <i class="fas fa-times"  id="confirmaInvalida" style="color: rgba(226, 14, 14, 0.979); display: none;"></i>
+                </label>
+                <input placeholder="Confirme sua senha" type="password" onkeyup="validarSenha()" id="inputConfSenha" required>
+            
+                <div class="buttons">
+                    <button type="submit"  class="btn-1">Cadastre-se</button>
+                    <button type="button"  class="btn-2" onclick="trocar()">Entrar</button>
+                </div>
+                
+            </form>
+
+            <form action="" id="form2" data-animation="top">
+                <h1 class="form-2" >Entrar</h1>
+                <div class="entrar">
+                    <label class="form-2" for="">Email</label>
+                    <input class="form-2" placeholder="romulo.pereira@gmail.com" type="email" id="inputLogin" required>
+                
+                    <label class="form-2" for="">Senha</label>
+                    <input class="form-2" placeholder="Sua senha" type="password" name="" id="inputPass" required>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn-2" onclick="trocar()">Cadastre-se</button>
+                    <button type="submit" class="btn-1">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="right">
+            <img src="./img/imgForm.png" alt="">
+        </div>
+        
+    </div>
+</body>
+<script src="./js/services/api.js"></script>
+<script src="./js/form.js"></script>
+</html>

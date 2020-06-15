@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://kit.fontawesome.com/02e8f10121.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+    <title>iRap</title>
+</head>
+ <body>
+
+    <nav>
+        <div class="container">
+            <div>
+                <h1 class="titulo"><img src="./img/logoo.png" alt=""></h1>
+            </div>
+            <div class="nav">
+            <ul>
+                <li><a id="cadPostagem" href="cadPostagens.html"></a></li>
+                <li><a id="nomeUser">Usuario</a></li>
+                <li><a onclick="logout()">Sair <i class='fas fa-sign-out-alt icon'></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <div class="showcase">
+                <div class="right">
+                    <div class="mainNews">
+                        <img id="mainImg" src="" alt="">                                       
+                        <h4 id="mainTitle"></h4>
+                        <p id="mainDesc"></p>
+                        <a href="#abrirModal" id="mainButton"></a>
+                    </div>
+                    
+                </div>
+                <div class="left">
+                    <img id="imgSlider" src="./img/capas/bk01.jpg" alt="">
+                    <img id="imgSlider" src="./img/capas/Nada_como_um_dia_após_o_outro_dia.jpg" alt="">
+                    <img id="imgSlider" src="./img/capas/2pac02.jpg" alt="">
+                    <img id="imgSlider" src="./img/capas/djonga01.jpg" alt="">
+                    <img id="imgSlider" src="./img/capas/lilbaby.jpg" alt="">
+
+
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="title">Ultima Noticias</h1>
+            <select name="" id="campoFiltro" onchange="filtro()">
+                <option value="1">Mais recentes</option>
+                <option value="2">Mais Antigas</option>
+            </select>
+        </div>
+        <div class="container">
+             <div id="cards" class="cards">
+            <!--    <div id="card" class="card">
+                    <img src="./img/bg.jpg" alt="">
+                    <h3 id="cardTitle">Title</h3>
+                    <p id="cardDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                    <a href="#abrirModal"><button>Mais</button></a>
+                </div> -->
+            </div>
+            <div id="abrirModal" class="modal">
+                <div>
+                    <a href="#fechar" title="Fechar" class="fechar"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    <div class="modalHeader">
+                        <h2 id="postTitle"></h2>
+                        <img onclick="favoritar()" id="favIcon" src="./img/icons/heart.png" alt="">
+                    </div>
+                    <div class="linha"></div>
+                    <img id="postImg" src="" alt="">
+                    <div class="fieldText">
+                        <h4>Descrição</h4>
+                        <p id="postDescricao"></p>
+                    </div>
+                    <div class="fieldCotent">
+                        <h4>Conteudo</h4>
+                        <p id="postConteudo"></p>
+                    </div>
+                    <div class="linha"></div>
+                    <section>
+                        <p><span>Publicado por: </span><i id="postNomeAutor"></i></p>
+                        <p><span>Data de publicação: </span><i id="postDataCadastro"></i></p>
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <img src="./img/logoo.png" alt="">
+            <div class="copyright">
+                <span>Desenvolvido por</span>
+                <p>Romullo Pereira</p>
+            </div>
+            <div class="contato">
+                <a href="https://github.com/romullo-pereira"><img src="./img/icons/github-white.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/romullo-pereira-84580b16b/"><img src="./img/icons/linkedin2.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/services/api.js"></script>
+<script src="./js/logado.js"></script>
+<script src="./js/posts.js"></script>
+</html>

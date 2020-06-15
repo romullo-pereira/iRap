@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/02e8f10121.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <title>iRap</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="titulo"><img src="./img/logoo.png" alt=""></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="cadastro.html"><button> Entrar <i class='fas fa-sign-in-alt icon'></i></button></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="banner">
+            <div class="opa">
+                <!-- <div class="container"> -->
+                    <div class="teste">
+                        <h1>O que é o iRap ?</h1>
+                        <p>Um portal de rap com algumas postagens sobre esse maravilhoso e desvalorizado estilo musical. Aqui temos Artigos com noticias, catalogo de álbuns e discografia.</p>
+                        <a href="#break"><button class="btn">VEJA <i class="fas fa-arrow-down icon"></i></button></a>
+                    </div>
+                    <div>
+                        <!-- <img src="./img/drawTupac.png"> -->
+                         <img style="height: auto;" src="./img/rap.png">
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div id="break"></div>
+        <div  class="content">
+            <div class="container">
+                <h1 class="title">Postagens</h1>
+            </div>
+            <div class="container"> 
+                <div id="cards" class="cards" data-animation="top">
+                    <!-- <div class="card">
+                        <img src="./img/bg.jpg" alt="">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam tenetur, itaque veniam officia quos corrupti dignissimos quam cumque quasi accusamus repellendus omnis minima reprehenderit, neque distinctio suscipit. Sequi, placeat?</p>
+                        <a href="#">Veja Mais <i class="fas fa-arrow-right"></i></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <img src="./img/logoo.png" alt="">
+                <div class="copyright">
+                    <span>Desenvolvido por</span>
+                    <p>Romullo Pereira</p>
+                </div>
+                <div class="contato">
+                    <a href="https://github.com/romullo-pereira"><img src="./img/icons/github-white.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/romullo-pereira-84580b16b/"><img src="./img/icons/linkedin2.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./js/services/api.js"></script>
+<script src="./js/script.js"></script>
+<script>
+    
+    $('.teste a').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top,
+                menuHeight = $('nav').innerHeight();
+        // console.log(e);
+        $('html, body').animate({
+            scrollTop : targetOffset - 100
+        }, 1000);
+    });
+
+    const target = document.querySelectorAll('[data-animation]');
+    const animationClass = 'animate';
+
+    function animationScroll() {
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 5);
+        target.forEach(function (element) {
+            if(windowTop > element.offsetTop) {
+                element.classList.add(animationClass);
+            }else {
+                element.classList.remove(animationClass);
+            }
+        })
+    }
+
+    animationScroll();
+
+    if(target.length) {
+        window.addEventListener('scroll' , function() {
+            animationScroll();
+        });
+    }
+
+
+</script>
+</html>
