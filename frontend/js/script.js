@@ -16,8 +16,12 @@ function plotarPostsIndex(posts) {
     // cardDesc.innerHTML = posts[0].descricao;
 
     for (let i = 0; i < posts.length; i++) {
+        if(posts[i].imagem == null){
+            posts[i].imagem = 'bg.jpg';
+        }
+
         cards.innerHTML += `<div class="card">
-                                <img src="./img/bg.jpg" alt="">
+                                <img src="./img/${posts[i].imagem}" alt="">
                                 <h3>${posts[i].titulo}</h3>
                                 <p>${posts[i].descricao}</p>
                                 <a href="cadastro.html">Veja Mais <i class="fas fa-arrow-right"></i></a>

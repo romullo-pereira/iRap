@@ -81,8 +81,7 @@ function validarForm(event) {
     event.preventDefault();
     if(nameValid && emailValid && passwordValid) {
         console.log('entrou');
-        createUser();
-        alert('Cadastrado com sucesso!');
+        validEmailUser();
     }else {
         alert('Informações Invalidas, verifique os campos!');
     }

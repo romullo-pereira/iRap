@@ -196,6 +196,7 @@ nav{
     font-size: 18px;
     text-align: center;
     border-radius: 5px;
+    box-shadow: 2px 3px 10px rgba(163, 163, 163, 0.897) ;
 }
 
 .cards {
@@ -209,7 +210,7 @@ nav{
 
 .card {
     width: 30%;
-    height: 400px;
+    height: 425px;
     margin-top: 30px;
     background-color: #fff;
     border-radius: 5px;
@@ -226,6 +227,7 @@ nav{
 .card h3 {
     margin-left: 20px;
     margin-top: 10px;
+    height: 13%;
 }
 
 .card p {

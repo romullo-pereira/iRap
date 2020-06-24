@@ -11,7 +11,7 @@ const Postagem = {
     },
 
     async indexAsc(request , response) {
-        connection.query('SELECT * FROM postagem ORDER BY idPostagem ASC', function (error, result) {
+        connection.query('SELECT postagem.* , nome FROM postagem JOIN usuario ON usuario.idUsuario = postagem.fkUsuario ORDER BY idPostagem ASC', function (error, result) {
             if (error) throw error;
             response.send(result)
         });
@@ -38,11 +38,11 @@ const Postagem = {
     },
 
     async create(request , response) {
-        const { title , desc , imagem , content} = request.body;
+        const { title , desc , imagem , content , idUser} = request.body;
 
-        const sql = 'INSERT INTO postagem (titulo , descricao , imagem , conteudo , dataCadastro) values (? , ? , ? , ? , now())';
+        const sql = 'INSERT INTO postagem (titulo , descricao , imagem , conteudo , fkUsuario , dataCadastro) values (? , ? , ? , ? , ? , now())';
 
-        const data = [title , desc , imagem , content ];
+        const data = [title , desc , imagem , content  , idUser];
 
         connection.query(sql , data , function (error , result) {
             if (error) throw error;

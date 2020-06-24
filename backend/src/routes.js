@@ -8,6 +8,7 @@ const PostController = require('./controllers/PostController');
 const routes = express.Router();
 
 routes.get("/users", UserController.index);
+routes.get("/users/:email", UserController.show);
 routes.post("/users", UserController.create);
 
 routes.post("/sessions", SessionController.create);
